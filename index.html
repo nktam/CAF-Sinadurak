@@ -12,21 +12,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            max-width: 700px;
+            background: linear-gradient(135deg, #f4f7fb 0%, #edf4ff 100%);
+            max-width: 760px;
             margin: auto;
-            padding: 20px;
+            padding: 24px;
+            color: #1f2937;
         }
 
         h1 {
             text-align: center;
+            margin-bottom: 20px;
+            color: #123b6b;
         }
 
         form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e5ebf5;
         }
 
         label {
@@ -46,29 +50,51 @@
         }
 
         button {
-            background: #0066cc;
+            background: linear-gradient(135deg, #0d6efd 0%, #0056d6 100%);
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
+            padding: 12px 22px;
+            border-radius: 10px;
             cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 8px 16px rgba(13, 110, 253, 0.2);
         }
 
         button:hover {
-            background: #004f9e;
+            background: linear-gradient(135deg, #0056d6 0%, #0043a3 100%);
+            transform: translateY(-1px);
         }
 
         #mezua {
             margin-top: 15px;
             font-weight: bold;
+            min-height: 24px;
+        }
+
+        .contador {
+            background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin: 18px 0 14px;
+            font-weight: 700;
+            box-shadow: 0 10px 18px rgba(29, 78, 216, 0.18);
         }
 
         .firma {
-            background: white;
-            margin-top: 10px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 12px;
+            padding: 16px 18px;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+            border: 1px solid #edf2f7;
+        }
+
+        .firma strong {
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #123b6b;
         }
     </style>
 </head>
@@ -104,6 +130,8 @@
 
         <h2>Jasotako sinadurak</h2>
 
+        <div id="contadorSinadurak" class="contador">Sinadurak: 0</div>
+
         <div id="listaSinadurak"></div>
 
     </div>
@@ -116,6 +144,7 @@
 
         const form=document.getElementById("sinaduraForm");
         const mezua=document.getElementById("mezua");
+        const contadorSinadurak=document.getElementById("contadorSinadurak");
 
         form.addEventListener("submit", async (e) => {
 
@@ -172,6 +201,14 @@
 
             if(error) {
                 return;
+            }
+
+            const {count, error: countError}=await supabaseClient
+                .from("sinadurak")
+                .select("*", {count: "exact", head: true});
+
+            if(!countError&&typeof count==="number") {
+                contadorSinadurak.textContent=`Sinadurak: ${count}`;
             }
 
             const lista=
