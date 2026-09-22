@@ -7,26 +7,41 @@
 
     <title>Sinadura Bilketa</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Chelsea+Market&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f4f7fb 0%, #edf4ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #edf4ff 100%);
             max-width: 760px;
             margin: auto;
             padding: 24px;
             color: #1f2937;
         }
 
+        p {
+            font-family: "Average Sans", sans-serif;
+            max-width: 68ch;
+            margin: 0 auto 22px;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+        }
+
         h1 {
+            font-family: "Chelsea Market", cursive;
+            font-size: 2.8rem;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             color: #123b6b;
         }
 
         form {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(226, 223, 223, 0.95);
             padding: 24px;
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
@@ -38,7 +53,8 @@
             margin-top: 10px;
         }
 
-        input,
+        input[type="text"],
+        input[type="email"],
         select {
             width: 100%;
             padding: 10px;
@@ -49,14 +65,40 @@
             box-sizing: border-box;
         }
 
+        .egoera-aukerak {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 8px 0 18px;
+        }
+
+        .egoera-aukerak label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .egoera-aukerak input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            accent-color: #0d6efd;
+        }
+
         button {
+            display: block;
+            min-width: 190px;
             background: linear-gradient(135deg, #0d6efd 0%, #0056d6 100%);
             color: white;
             border: none;
-            padding: 12px 22px;
+            padding: 16px 28px;
+            margin: 20px auto 0;
             border-radius: 10px;
             cursor: pointer;
-            font-weight: 600;
+            font-size: 1.15rem;
+            font-weight: 700;
             transition: transform 0.15s ease, box-shadow 0.15s ease;
             box-shadow: 0 8px 16px rgba(13, 110, 253, 0.2);
         }
@@ -70,16 +112,31 @@
             margin-top: 15px;
             font-weight: bold;
             min-height: 24px;
+            color: #000;
         }
 
-        .contador {
-            background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
-            color: #ffffff;
+
+        .contador-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .contador-mini {
+            background: rgba(226, 223, 223, 0.95);
+            border: 1px solid #dfeaf7;
             border-radius: 12px;
-            padding: 12px 16px;
-            margin: 18px 0 14px;
+            padding: 12px 14px;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
             font-weight: 700;
-            box-shadow: 0 10px 18px rgba(29, 78, 216, 0.18);
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .firma {
@@ -96,12 +153,58 @@
             margin-bottom: 6px;
             color: #123b6b;
         }
+
+        .info-box {
+            font-family: "Average Sans", sans-serif;
+            background: color #fff;
+            border: 1px solid #17203a;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin: 18px 0 20px;
+            color: #1c3253;
+            font-weight: 700;
+            line-height: 1.6rem;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(34, 53, 95, 0.12);
+        }
+
+        .footer-logo {
+            display: block;
+            width: 180px;
+            margin: 28px auto 0;
+            opacity: 0.95;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Sinadura Bilketa</h1>
+    <h1>ISRAELEKIN HARREMANAK ETEN<br>CAF EHU-TIK KANPO</h1>
+
+    <p>CAF trengintza enpresa euskaldunak, lurralde okupatuan legez kanpoko koloniak lotzen dituen tren sarea eraikitzen
+        lagundu du. Bertako apartheid eta okupazio egoeran
+        sakonduz negozia eginez. Horregatik diogu EHU gisako instituzio publiko batek berarekin
+        harremanak moztu beharko lituzkeela. Euskal Herritik Israelen aurkako boikot kanpainen
+        erdigunea hartu du enpresa honek azken garaian eta garrantzitsua da unibertsitatetik guk
+        honi ekarpena egitea, boikota guztiok batera gauzatzean bilakatzen baita efektibo.
+        Francesca Albanese NBEko Palestinako lurralde okupatuetako giza eskubideen egoerari
+        buruzko Espazio Kontalari Bereziaren txostenean, CAF Palestinako apartheidaren eta
+        genozidioaren onuradun diren enpresen artean aipatzen da.</p>
+    <p>
+        Orain dela lau urte sinatu zen CAFek Bizkaiko Campusean enpresa-gela bat izateko
+        kontratua eta aurten hau bertan behera uzteko eskaria egin ezean, automatikoki berrituko
+        da. Duela urte batzuk lortu genuen Gipuzkoako Campusean halako gela berri bat ez
+        irekitzea, eta horrek harreman zahar hau etetea posible dela erakusten digu. Bada garaia
+        enpresen interesak erdigunetik kendu eta boikotari bide egiteko. Honen gaineko
+        erantzukizun zuzena EHUrena da eta horregatik exijitzen diogu CAFekin dituen harreman
+        guztiak bertan behera uztea, baita genozidioan parte hartzen duten bestelako entitate eta
+        enpresekin ere.</p>
+    <p>Unibertsitate komunitatearen esku dago presioa egin eta harremanak etetea. <b>CAF EHUtik
+            Kanpo! EHU harreman oro eten!</b></p>
+    <div class="info-box">
+        Sinadura honekin EHUko Gobernu Kontseiluari CAFek Bilboko Ingeniaritza eskolan
+        duen enpresa gelaren akordio ez berritzea eskatzen dut.
+    </div>
 
     <form id='sinaduraForm'>
 
@@ -111,12 +214,17 @@
         <label>Emaila *</label>
         <input type="email" id="emaila" required>
 
-        <label>Egoera *</label>
-        <select id="egoera" required>
-            <option value="">Hautatu...</option>
-            <option value="Ikaslea">Ikaslea</option>
-            <option value="Langilea">Langilea</option>
-        </select>
+        <label>EHU kolektiboa *</label>
+        <div class="egoera-aukerak">
+            <label>
+                <input type="checkbox" name="egoera" value="Ikaslea">
+                Ikaslea
+            </label>
+            <label>
+                <input type="checkbox" name="egoera" value="Langilea">
+                Langilea
+            </label>
+        </div>
 
         <button type="submit">
             Sinatu
@@ -130,11 +238,15 @@
 
         <h2>Jasotako sinadurak</h2>
 
-        <div id="contadorSinadurak" class="contador">Sinadurak: 0</div>
-
-        <div id="listaSinadurak"></div>
+        <div class="contador-row">
+            <div id="contadorSinadurak" class="contador-mini">Guztira: 0</div>
+            <div id="contadorIkaslea" class="contador-mini">Ikasleak: 0</div>
+            <div id="contadorLangilea" class="contador-mini">Langileak: 0</div>
+        </div>
 
     </div>
+
+    <img src="EHU Palestina logoa.svg" alt="EHU Palestina logoa" class="footer-logo">
 
     <script>
 
@@ -145,6 +257,21 @@
         const form=document.getElementById("sinaduraForm");
         const mezua=document.getElementById("mezua");
         const contadorSinadurak=document.getElementById("contadorSinadurak");
+        const contadorIkaslea=document.getElementById("contadorIkaslea");
+        const contadorLangilea=document.getElementById("contadorLangilea");
+        const egoeraAukerak=document.querySelectorAll('input[name="egoera"]');
+
+        egoeraAukerak.forEach((aukera) => {
+            aukera.addEventListener("change", () => {
+                if(aukera.checked) {
+                    egoeraAukerak.forEach((besteAukera) => {
+                        if(besteAukera!==aukera) {
+                            besteAukera.checked=false;
+                        }
+                    });
+                }
+            });
+        });
 
         form.addEventListener("submit", async (e) => {
 
@@ -156,8 +283,16 @@
             const emaila=
                 document.getElementById("emaila").value;
 
-            const egoera=
-                document.getElementById("egoera").value;
+            const hautatutakoEgoera=
+                document.querySelector('input[name="egoera"]:checked');
+
+            if(!hautatutakoEgoera) {
+                mezua.style.color="red";
+                mezua.innerText="Hautatu egoera bat";
+                return;
+            }
+
+            const egoera=hautatutakoEgoera.value;
 
             const {error}=await supabaseClient
                 .from("sinadurak")
@@ -190,52 +325,31 @@
 
         async function kargatuSinadurak() {
 
-            const {data, error}=await supabaseClient
-                .from("sinadurak")
-                .select("*")
-                .order(
-                    "created_at",
-                    {ascending: false}
-                )
-                .limit(10);
-
-            if(error) {
-                return;
-            }
-
-            const {count, error: countError}=await supabaseClient
+            const {count, error}=await supabaseClient
                 .from("sinadurak")
                 .select("*", {count: "exact", head: true});
 
-            if(!countError&&typeof count==="number") {
-                contadorSinadurak.textContent=`Sinadurak: ${count}`;
+            if(!error&&typeof count==="number") {
+                contadorSinadurak.textContent=`Guztira: ${count}`;
             }
 
-            const lista=
-                document.getElementById(
-                    "listaSinadurak"
-                );
+            const {count: countIkaslea, error: errorIkaslea}=await supabaseClient
+                .from("sinadurak")
+                .select("*", {count: "exact", head: true})
+                .eq("egoera", "Ikaslea");
 
-            lista.innerHTML="";
+            if(!errorIkaslea&&typeof countIkaslea==="number") {
+                contadorIkaslea.textContent=`Ikasleak: ${countIkaslea}`;
+            }
 
-            data.forEach(sinadura => {
+            const {count: countLangilea, error: errorLangilea}=await supabaseClient
+                .from("sinadurak")
+                .select("*", {count: "exact", head: true})
+                .eq("egoera", "Langilea");
 
-                const div=
-                    document.createElement("div");
-
-                div.className="firma";
-
-                div.innerHTML=`
-            <strong>
-                ${sinadura.izen_abizenak}
-            </strong>
-            <br>
-            ${sinadura.egoera}
-        `;
-
-                lista.appendChild(div);
-
-            });
+            if(!errorLangilea&&typeof countLangilea==="number") {
+                contadorLangilea.textContent=`Langileak: ${countLangilea}`;
+            }
 
         }
 
