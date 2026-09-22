@@ -113,7 +113,7 @@
         const supabaseUrl="https://faqfkiwkvnsurekmjerv.supabase.co/rest/v1/";
         const supabaseKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhcWZraXdrdm5zdXJla21qZXJ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwODk5ODgsImV4cCI6MjEwNTY2NTk4OH0.dzTQbvM9vntFCmG5egS29OJV_Alt0GQayO7fjp4MyFg";
 
-        const supabase=window.supabase.createClient(
+        const supabaseClient=window.supabase.createClient(
             supabaseUrl,
             supabaseKey
         );
@@ -134,7 +134,7 @@
             const egoera=
                 document.getElementById("egoera").value;
 
-            const {error}=await supabase
+            const {error}=await supabaseClient
                 .from("sinadurak")
                 .insert([
                     {
@@ -165,7 +165,7 @@
 
         async function kargatuSinadurak() {
 
-            const {data, error}=await supabase
+            const {data, error}=await supabaseClient
                 .from("sinadurak")
                 .select("*")
                 .order(
