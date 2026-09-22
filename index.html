@@ -110,12 +110,9 @@
 
     <script>
 
-
-
-        import {createClient} from '@supabase/supabase-js'
-        const supabaseUrl='https://faqfkiwkvnsurekmjerv.supabase.co'
+        const supabaseUrl='https://faqfkiwkvnsurekmjerv.supabase.co';
         const supabaseKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZhcWZraXdrdm5zdXJla21qZXJ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwODk5ODgsImV4cCI6MjEwNTY2NTk4OH0.dzTQbvM9vntFCmG5egS29OJV_Alt0GQayO7fjp4MyFg";
-        const supabase=createClient(supabaseUrl, supabaseKey)
+        const supabase=window.supabase.createClient(supabaseUrl, supabaseKey);
 
         const form=document.getElementById("sinaduraForm");
         const mezua=document.getElementById("mezua");
@@ -133,7 +130,7 @@
             const egoera=
                 document.getElementById("egoera").value;
 
-            const {error}=await supabaseClient
+            const {error}=await supabase
                 .from("sinadurak")
                 .insert([
                     {
@@ -164,13 +161,14 @@
 
         async function kargatuSinadurak() {
 
-            const {data, error}=await supabaseClient
+            const {data, error}=await supabase
                 .from("sinadurak")
                 .select("*")
                 .order(
                     "created_at",
                     {ascending: false}
-                );
+                )
+                .limit(10);
 
             if(error) {
                 return;
@@ -192,7 +190,7 @@
 
                 div.innerHTML=`
             <strong>
-                ${sinadura.izen_abizenak}
+                ${sinadura.izen_abizenak}git
             </strong>
             <br>
             ${sinadura.egoera}
