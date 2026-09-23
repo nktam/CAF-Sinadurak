@@ -180,9 +180,11 @@ form {
             padding: 6px 8px;
             border: 1px solid transparent;
             border-radius: 6px;
+            background: rgba(18,59,107,0.06);
+            border-color: rgba(18,59,107,0.12);
         }
 
         #langLink:hover {
-            background: rgba(18,59,107,0.06);
-            border-color: rgba(18,59,107,0.12);
+            background: rgba(18, 60, 107, 0.227);
+            border-color: rgba(18, 60, 107, 0.297);
         }

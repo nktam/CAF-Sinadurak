@@ -22,15 +22,15 @@ const translations = {
         <p>Bildutako datu guztiak hilabeteko epean ezabatuko dira, sinadura-bilketaren helburua bete ondoren.</p>`,
     },
     es: {
-        title: 'CORTAR RELACIONES CON ISRAEL\nCAF FUERA DE EHU',
-        p1: `La empresa ferroviaria CAF, de origen vasco, ha colaborado en la construcción de una red ferroviaria que conecta colonias ilegales en territorios ocupados. Ha profundizado en prácticas que sustentan el apartheid y la ocupación. Por ello creemos que una institución pública como la EHU debería cortar sus relaciones con CAF. En los últimos tiempos, esta empresa ha sido objetivo de campañas de boicot desde Euskal Herria, y es importante que la universidad aporte a ese boicot colectivo. En el informe de Francesca Albanese, Relatora Especial de la ONU sobre los derechos humanos en los territorios palestinos ocupados, CAF aparece entre las empresas beneficiarias del apartheid y el genocidio.`,
-        p2: `Hace cuatro años se firmó un contrato para que CAF tuviera un espacio empresarial en el Campus de Bizkaia; si no se solicita su cancelación este año, se renovará automáticamente. Hace años logramos que no se abriera un espacio similar en el Campus de Gipuzkoa, lo que demuestra que es posible cortar esta relación. Es hora de anteponer el interés público y abrir el camino al boicot. La responsabilidad directa recae en la EHU, por eso exigimos que rompa toda relación con CAF y con otras entidades o empresas implicadas en crímenes contra la humanidad.`,
-        p3: `Corresponde a la comunidad universitaria presionar para cortar relaciones. <br><strong>¡CAF FUERA DE EHU! ¡Que se corten todas las relaciones con EHU!</strong>`,
+        title: 'CESE DE RELACIONES CON ISRAEL\nCAF FUERA DE LA EHU',
+        p1: `La empresa ferroviaria vasca CAF ha colaborado en la construcción de la red ferroviaria que une las colonias ilegales en territorio ocupado, profundizando y haciendo negocio con el estado de apartheid y ocupación de Palestina. Por eso decimos que una institución pública como la EHU debería cortar relaciones con ella. Esta empresa es el centro de las campañas de boicot contra Israel impulsado desde el País Vasco y es importante que desde la universidad hagamos nuestra aportación, ya que el boicot se convierte en efectivo cuando todos juntos lo hacemos. En el informe de la Relatora Especial sobre la situación de los derechos humanos en los territorios palestinos ocupados de la ONU, Francesca Albanese, se cita a CAF entre las empresas beneficiadas por el apartheid palestino y el genocidio.`,
+        p2: `Hace cuatro años se firmó el contrato para que CAF tuviera un aula de empresa en el Campus de Bizkaia y si este año no se solicita su rescisión, se renovará automáticamente. Hace unos años conseguimos que en el Campus de Gipuzkoa no se abriera un aula de estas características, lo que nos demuestra que es posible romper esta relación. Ya es hora de que los intereses de las empresas se quiten del centro y den paso al boicot. La responsabilidad directa sobre esto es de la EHU y por eso le exigimos que abandone todas sus relaciones con CAF, así como con otras entidades y empresas implicadas en el genocidio.`,
+        p3: `Está en manos de la comunidad universitaria presionar y romper relaciones. <br><strong>CAF fuera de la EHU! EHU, HARREMAN ORO ETEN!</strong>`,
         label_name: 'Nombre y apellidos *',
         label_id: 'DNI *',
         label_kolektiboa: 'Colectivo EHU *',
         submit: 'FIRMAR',
-        info_box: `Con esta firma solicito al <strong>Consejo de Gobierno de la EHU</strong> que no renueve el acuerdo por el espacio empresarial de CAF en la Escuela de Ingeniería de Bilbao.`,
+        info_box: `Con esta firma pido al Consejo de Gobierno de la EHU que no renueve el acuerdo del aula de empresa de CAF en la escuela de Ingeniería de Bilbao.`,
         message_choose: 'Elige un colectivo',
         message_saved: 'Firma registrada correctamente',
         error_prefix: 'Error:',
@@ -38,9 +38,9 @@ const translations = {
         ikaslea_label: 'Estudiantes',
         langilea_label: 'Trabajadores',
         privacy_title: 'Firmas recogidas',
-        privacy_box: `<p>Las firmas recogidas serán custodiadas por <strong>miembros de EHU Palestina</strong>, con el fin de presentarlas posteriormente al <strong>Rectorado de la EHU</strong>. Los datos personales recogidos no se utilizarán para ningún otro fin ni se facilitarán a terceros o instituciones.</p>
-        <p>Al firmar, das permiso para la recopilación y el tratamiento de tus datos personales, exclusivamente para la gestión de esta iniciativa y por miembros de EHU Palestina.</p>
-        <p>Todos los datos recogidos se eliminarán en el plazo de un mes una vez cumplido el objetivo de la recogida de firmas.</p>`,
+        privacy_box: `<p>Las firmas recibidas serán guardadas por miembros de <strong>EHU Palestina</strong> con el objetivo de presentarlas posteriormente al <strong>Rectorado de la EHU</strong>. Los datos personales recabados no se utilizarán para ningún otro fin ni se cederán a terceras personas o entidades.</p>
+        <p>En la entrega de la firma, usted autoriza la recogida y tratamiento de sus datos personales, siempre para la gestión de esta iniciativa y su uso exclusivo por miembros de EHU Palestina.</p>
+        <p>Todos los datos recabados serán borrados en el plazo de un mes, una vez cumplido el objetivo de recogida de firmas.</p>`,
     }
 };
 
